@@ -21,22 +21,10 @@ def chemical_reaction(i_str):
     return buffer
 
 
-def react(i_str):
-    while True:
-        new_c = chemical_reaction(i_str)
-
-        if new_c == i_str:
-            break
-        else:
-            i_str = new_c
-
-    return new_c
-
-
 if __name__ == '__main__':
     s = time.time()
     chem = read_in_file(FILE_NAME)
-    new_chem = react(chem)
+    new_chem = chemical_reaction(chem)
 
     print("Units in final chem: {}".format(len(new_chem)))
     print("Part 1 time: {}s".format(round(time.time() - s, 2)))
@@ -46,7 +34,7 @@ if __name__ == '__main__':
     min_chem = None
     for c in chars:
         reduced_chem = ([char for char in chem if char.lower() != c])
-        r_chem_len = len(react(reduced_chem))
+        r_chem_len = len(chemical_reaction(reduced_chem))
         if not min_chem:
             min_chem = r_chem_len
             continue
