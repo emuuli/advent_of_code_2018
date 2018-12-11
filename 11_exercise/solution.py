@@ -20,14 +20,11 @@ if __name__ == '__main__':
             for y in range(1, 301 - i):
 
                 res = 0
-                try:
-                    for k in range(0, i):
-                        for l in range(0, i):
-                            res += result[k + x][l + y]
-                    if res > maxx:
-                        maxx = res
-                        print(x, y, i)
-                except:
-                    pass
+                for k in range(0, i):
+                    for l in range(0, i):
+                        res += result[k + x][l + y]
+                if res > maxx:
+                    maxx = res
+                    print(x, y, i)
 
 # 233 282 11
