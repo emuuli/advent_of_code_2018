@@ -25,6 +25,5 @@ if __name__ == '__main__':
                         res += result[k + x][l + y]
                 if res > maxx:
                     maxx = res
+                    # 233 282 11
                     print(x, y, i)
-
-# 233 282 11
