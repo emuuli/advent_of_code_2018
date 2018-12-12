@@ -80,5 +80,6 @@ if __name__ == '__main__':
         diff = sum - cur_answ
         cur_answ = sum
 
+    # got 34 as a constant of change after 191 years
     result = (50000000000 - 191) * 34 + sum
     print("Result after 50000000000 years: {}".format(result))
