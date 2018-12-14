@@ -1,11 +1,5 @@
-import re
-
 FILE_NAME = "input.txt"
 initial_state = '###....#..#..#......####.#..##..#..###......##.##..#...#.##.###.##.###.....#.###..#.#.##.#..#.#'
-
-
-def extract_ints(a_string):
-    return tuple(map(int, re.findall(r'-?\d+', a_string)))
 
 
 def read_in_file(file_name):
